@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOVEWOLF 369 — Доброе дело на сегодня</title>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: system-ui; text-align: center; padding: 50px; background: linear-gradient(135deg, #ff9a9e, #fad0c4); color: #fff; min-height: 100vh; }
+    h1 { font-size: 3em; }
+    .deed { font-size: 2em; margin: 40px; padding: 30px; background: rgba(255,255,255,0.2); border-radius: 20px; }
+    button { font-size: 1.5em; padding: 15px 30px; background: #ff2d95; color: white; border: none; border-radius: 50px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>LOVEWOLF 369™</h1>
+  <p>Твоё доброе дело на сегодня:</p>
+  <div class="deed" id="deed"></div>
+  <button onclick="newDeed()">Ещё одно!</button>
+
+  <script>
+    const deeds = [
+      "Улыбнись первому встречному и скажи «Хорошего дня!»",
+      "Напиши сообщение человеку, с которым давно не общался: «Просто вспомнил о тебе. Ты крутой»",
+      "Оставь 5 звёзд и добрый отзыв любому маленькому кафе/магазину",
+      "Поделись едой с бездомным животным",
+      "Сделай анонимный донат 100 рублей на любое доброе дело",
+      "Позвони родителям просто так и скажи, что любишь",
+      "Оплати кофе человеку за тобой в очереди",
+      "Напиши в чат «Я вами горжусь» — и отметь 3 человек",
+      "Убери мусор в парке (хотя бы 5 штук)",
+      "Сделай комплимент незнакомцу",
+      "Прости кого-то, кого давно держал в сердце",
+      "Скинь 50 рублей музыканту на улице",
+      "Напиши «Спасибо, что ты есть» человеку, который тебя сегодня вдохновил",
+      "Отпусти все обиды до конца этого дня",
+      "Сделай 10 добрых дел сразу — и мир взорвётся любовью"
+    ];
+    function newDeed() {
+      const deed = deeds[Math.floor(Math.random() * deeds.length)];
+      document.getElementById("deed").innerHTML = "❤️ " + deed;
+    }
+    newDeed();
+  </script>
+</body>
+</html>
